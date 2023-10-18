@@ -34,7 +34,8 @@ async function run() {
             const cursor = productCollection.find();
             const result = await cursor.toArray();
             res.send(result);
-        })
+        });
+
         app.post('/product', async (req, res) => {
             const newProduct = req.body;
             console.log(newProduct);
